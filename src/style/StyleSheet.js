@@ -86,10 +86,6 @@ export const styles = StyleSheet.create({
     padding: 10,
     fontSize: 20,
   },
-  
-  text: {
-    color: "green",
-  }
 });
 
 //Exportação padrão

@@ -1,7 +1,14 @@
-import { View, Image, Text, TextInput, TouchableOpacity, Modal, Button } from "react-native";
+import {
+  View,
+  Image,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Modal,
+  Button,
+} from "react-native";
 import styles from "./src/style/StyleSheet";
 import { useState } from "react";
-import ComponentModel from "./src/components/componentModel"
 
 export default function App() {
   const [visible, setVisible] = useState(false);
@@ -15,40 +22,54 @@ export default function App() {
   };
 
   return (
-    
+    //Essa é a View principal, que ocupa toda a tela
     <View style={styles.container}>
+      {/* Esse é o botão que vai abrir o meu modal e vai deixar a visibilidade como "true" */}
       <Image
         style={styles.logo}
         source={require("./src/assets/images/Logo.png")}
-
+      />
+      
       <View style={styles.home}>
         <Text style={styles.question}>Qual a melhor opção?</Text>
 
         <Text style={styles.insert}>Álcool (preço por litro):</Text>
-        <TextInput style={styles.inputs}></TextInput>
+        <TextInput></TextInput>
+        <Button
+          style={styles.button}
+          title="Caucular"
+          onPress={() => visModal(true)}
+        />
 
-        <Text style={styles.insertt}>Gasolina (preço por litro):</Text>
-        <TextInput style={styles.inputs}></TextInput>
+        <Modal
+        animationType={animationType}
+        transparent={transparent}
+        visible={visible}
+        onRequestClose={() => setModalVisible(false)} // Fechar o modal ao pressionar o botão "Voltar" no Android
+      >
+        <Image
+        style={styles.logo}
+        source={require("./src/assets/images/gas.png")}
+      />
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
 
-        <TouchableOpacity style={styles.button} onPress={() => visModal(true)}>
-          <Text style={styles.btn}>Calcular</Text>
-          </TouchableOpacity>
+        <Text style={{ color:"white"}}>Compensa usar Alcool</Text>
 
-        <Modal transparent={true} animationType="fade" visible={visible}>
-      
-          <View style={styles.modal}>
-            <ComponentModel/>
-            
-              <Button
-                title="Calcular novamente"
-                onPress={() => visModal(false)}
-              />
+          <View style={{ backgroundColor: 'white', padding: 150, borderRadius: 10 }}>
+          
+          <Text style={{ color:"green"}}>Compensa usar Alcool</Text>
 
+            <Button
+              title="Fechar Modal"
+              onPress={() => funcaoMod(false)} // Fechar o modal ao pressionar o botão
+            />
           </View>
-        </Modal>
-
+        </View>
+      </Modal>
+      
       </View>
 
+      {/* true or false*/}
     </View>
   );
 }
