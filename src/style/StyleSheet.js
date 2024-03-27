@@ -6,9 +6,38 @@ export const styles = StyleSheet.create({
   //Classes
   container: {
     flex: 1,
-    backgroundColor: "#FFF",
+    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: "black",
+  },
+
+  home: {
+    justifyContent: "center",
+    width: "25%",
+  },
+
+  logo: {
+    width: 170,
+    height: 170,
+    borderRadius: 20,
+    textAlign: "center",
+  },
+
+  question: {
+    color: "white",
+    fontSize: 30,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginTop: 20,
+  },
+
+  insert: {
+    color: "white",
+    fontSize: 20,
+    fontWeight: "bold",
+    textAlign: "left",
+    marginTop: 50,
   },
 });
 
