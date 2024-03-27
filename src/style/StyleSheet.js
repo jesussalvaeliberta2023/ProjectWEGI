@@ -6,10 +6,16 @@ export const styles = StyleSheet.create({
   //Classes
   container: {
     flex: 1,
-    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "black",
+  },
+
+  modal: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "grey",
   },
 
   home: {
@@ -38,6 +44,10 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "left",
     marginTop: 50,
+  },
+
+  button: {
+    backgroundColor: "red",
   },
 });
 

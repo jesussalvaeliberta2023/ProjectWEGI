@@ -1,7 +1,26 @@
-import { View, Image, Text, TextInput, TouchableOpacity } from "react-native";
+import {
+  View,
+  Image,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Modal,
+  Button,
+} from "react-native";
 import styles from "./src/style/StyleSheet";
+import { useState } from "react";
 
 export default function App() {
+  const [visible, setVisible] = useState(false);
+
+  visModal = (vis) => {
+    if (!visible) {
+      setVisible(vis);
+    } else {
+      setVisible(vis);
+    }
+  };
+
   return (
     //Essa é a View principal, que ocupa toda a tela
     <View style={styles.container}>
@@ -14,7 +33,23 @@ export default function App() {
         <Text style={styles.question}>Qual a melhor opção?</Text>
 
         <Text style={styles.insert}>Álcool (preço por litro):</Text>
-        <TouchableOpacity />
+        <TextInput></TextInput>
+        <Button
+          style={styles.button}
+          title="Caucular"
+          onPress={() => visModal(true)}
+        />
+        <Modal transparent={true} animationType="fade" visible={visible}>
+          <View style={styles.modal}>
+            <View style={styles.modal}>
+              <Text style={{ fontSize: 20 }}>Modal</Text>
+              <Button
+                title="Caucular novamente"
+                onPress={() => visModal(false)}
+              />
+            </View>
+          </View>
+        </Modal>
       </View>
 
       {/* true or false*/}
