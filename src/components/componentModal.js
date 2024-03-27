@@ -1,6 +1,7 @@
 import { View, Image, Text, TouchableOpacity, Modal } from "react-native";
 import React, { useState } from "react";
 import styles from "../style/StyleSheet";
+import Texto from "./TextComponent";
 
 // Fazendo as funções
 export default function componentModal({ result, visible, cond, alc, gas }) {
@@ -17,17 +18,17 @@ export default function componentModal({ result, visible, cond, alc, gas }) {
         />
 
         {/*Textos que mostra o resultado que compensa e o quanto foi colocado de alcool e gasolina*/}
-        <Text style={styles.com}>{cond}</Text>
-        <Text style={styles.look}>Com os preços:</Text>
-        <Text style={styles.prices}>Álcool: R$ {alc}</Text>
-        <Text style={styles.pricess}>Gasolina: R$ {gas}</Text>
+        <Texto styleText={styles.com} texto={cond} />
+        <Texto styleText={styles.look} texto="Com os preços:" />
+        <Texto styleText={styles.prices} texto={`Álcool: R$ ${alc}`} />
+        <Texto styleText={styles.pricess} texto={`Gasolina: R$  ${gas}`} />
 
         {/*Botão Touchable para fechar*/}
         <TouchableOpacity
           style={styles.buttonn}
           onPress={() => visModal(false)}
         >
-          <Text style={styles.btnn}>Calcular novamente</Text>
+          <Texto styleText={styles.btnn} texto="Calcular Novamento" />
         </TouchableOpacity>
       </View>
     </Modal>

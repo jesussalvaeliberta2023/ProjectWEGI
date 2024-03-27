@@ -4,6 +4,7 @@ import { View, Image, Text, TextInput, TouchableOpacity } from "react-native";
 import styles from "./src/style/StyleSheet";
 import React, { useState } from "react";
 import ComponentModal from "./src/components/componentModal";
+import Texto from "./src/components/TextComponent";
 
 // Fazendo as funções
 export default function App() {
@@ -41,10 +42,10 @@ export default function App() {
       />
 
       {/*Os textos*/}
-      <Text style={styles.question}>Qual a melhor opção?</Text>
+      <Texto styleText={styles.question} texto="Qual a melhor opção?" />
 
       {/*Os inputs com os values para a conta*/}
-      <Text style={styles.insert}>Álcool (preço por litro):</Text>
+      <Texto styleText={styles.insert} texto="Álcool (preço por litro):" />
       <TextInput
         style={styles.inputs}
         onChangeText={setAlcool}
@@ -52,7 +53,7 @@ export default function App() {
         keyboardType="numeric"
       />
 
-      <Text style={styles.insertt}>Gasolina (preço por litro):</Text>
+      <Texto styleText={styles.insertt} texto="Gasolina (preço por litro):" />
       <TextInput
         style={styles.inputs}
         onChangeText={setGasolina}
@@ -66,7 +67,13 @@ export default function App() {
       </TouchableOpacity>
 
       {/*Código do modal*/}
-    <ComponentModal result={condicao} visible={visible} cond={condicao} alc={alcool} gas={gasolina} />
+      <ComponentModal
+        result={condicao}
+        visible={visible}
+        cond={condicao}
+        alc={alcool}
+        gas={gasolina}
+      />
     </View>
   );
 }
