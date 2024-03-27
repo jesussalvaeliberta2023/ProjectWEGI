@@ -1,15 +1,9 @@
 // Importando tudo que foi usado
-import {
-  View,
-  Image,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  Modal,
-} from "react-native";
+import { View, Image, Text, TextInput, TouchableOpacity } from "react-native";
 // Importando o styles
 import styles from "./src/style/StyleSheet";
 import React, { useState } from "react";
+import ComponentModal from "./src/components/componentModal";
 
 // Fazendo as funções
 export default function App() {
@@ -72,29 +66,7 @@ export default function App() {
       </TouchableOpacity>
 
       {/*Código do modal*/}
-      <Modal transparent={true} animationType="slide" visible={visible}>
-        <View style={styles.modal}>
-          {/*Imagem*/}
-          <Image
-            style={styles.logo}
-            source={require("./src/assets/images/gas.png")}
-          />
-
-          {/*Textos que mostra o resultado que compensa e o quanto foi colocado de alcool e gasolina*/}
-          <Text style={styles.com}>{condicao}</Text>
-          <Text style={styles.look}>Com os preços:</Text>
-          <Text style={styles.prices}>Álcool: R$ {alcool}</Text>
-          <Text style={styles.pricess}>Gasolina: R$ {gasolina}</Text>
-
-          {/*Botão Touchable para fechar*/}
-          <TouchableOpacity
-            style={styles.buttonn}
-            onPress={() => visModal(false)}
-          >
-            <Text style={styles.btnn}>Calcular novamente</Text>
-          </TouchableOpacity>
-        </View>
-      </Modal>
+    <ComponentModal result={condicao} visible={visible} cond={condicao} alc={alcool} gas={gasolina} />
     </View>
   );
 }
