@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { View, Text, Modal, Button } from 'react-native';
+import { View, Text, Modal, Button, Image } from 'react-native';
+import styles from '../style/StyleSheet';
 
-export default function App() {
+export default function ComponentModel() {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Button
-        title="Abrir Modal"
-        onPress={() => setModalVisible(true)} // Exibir o modal ao pressionar o botão
+      <Image
+        style={styles.logo}
+        source={require("../assets/images/gas.png")}
       />
       <Modal
         animationType="slide"
@@ -17,8 +18,11 @@ export default function App() {
         onRequestClose={() => setModalVisible(false)} // Fechar o modal ao pressionar o botão "Voltar" no Android
       >
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+
+        <Text style={{ color:"green",}}>Compensa usar Alcool</Text>
+
           <View style={{ backgroundColor: 'white', padding: 20, borderRadius: 10 }}>
-            <Text>Este é um modal simples.</Text>
+      
             <Button
               title="Fechar Modal"
               onPress={() => setModalVisible(false)} // Fechar o modal ao pressionar o botão
@@ -29,3 +33,4 @@ export default function App() {
     </View>
   );
 }
+

@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "grey",
+    backgroundColor: "black",
   },
 
   home: {
@@ -49,6 +49,10 @@ export const styles = StyleSheet.create({
   button: {
     backgroundColor: "red",
   },
+  
+  text: {
+    color: "green",
+  }
 });
 
 //Exportação padrão

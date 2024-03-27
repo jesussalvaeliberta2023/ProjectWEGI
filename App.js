@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import styles from "./src/style/StyleSheet";
 import { useState } from "react";
+import ComponentModel from "./src/components/componentModel"
 
 export default function App() {
   const [visible, setVisible] = useState(false);
@@ -29,6 +30,7 @@ export default function App() {
         style={styles.logo}
         source={require("./src/assets/images/Logo.png")}
       />
+      
       <View style={styles.home}>
         <Text style={styles.question}>Qual a melhor opção?</Text>
 
@@ -40,14 +42,15 @@ export default function App() {
           onPress={() => visModal(true)}
         />
         <Modal transparent={true} animationType="fade" visible={visible}>
+      
           <View style={styles.modal}>
-            <View style={styles.modal}>
-              <Text style={{ fontSize: 20 }}>Modal</Text>
+            <ComponentModel/>
+            
               <Button
                 title="Caucular novamente"
                 onPress={() => visModal(false)}
               />
-            </View>
+
           </View>
         </Modal>
       </View>
