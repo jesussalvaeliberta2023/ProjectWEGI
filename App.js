@@ -4,7 +4,7 @@ import { View } from "react-native";
 // Importando o styles
 import styles from "./src/style/StyleSheet";
 import React, { useState } from "react";
-import ComponentModal from "./src/components/componentModal";
+import ComponentModal from "./src/components/ModalComponent";
 import Texto from "./src/components/TextComponent";
 import Input from "./src/components/InputComponent";
 import Imagem from "./src/components/ImageComponent";
