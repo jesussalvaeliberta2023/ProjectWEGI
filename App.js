@@ -63,8 +63,11 @@ export default function App() {
       />
 
       {/*Botão Touchable com a função do calculo e para abrir o modal*/}
-      <TouchableOpacity style={styles.button} onPress={() => calculo()}>
-        <Text style={styles.btn}>Calcular</Text>
+      <TouchableOpacity
+        styleTouchable={styles.button}
+        onPress={() => calculo()}
+      >
+        <Texto styleText={styles.btn} texto="Calcular" />
       </TouchableOpacity>
 
       {/*Código do modal*/}
