@@ -76,6 +76,25 @@ const styles = StyleSheet.create({
     marginTop: 40,
   },
 
+  btn: {
+    color: "white",
+    textAlign: "center",
+    fontSize: 20,
+    fontWeight: "bold",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  btnn: {
+    color: "#DC143C",
+    textAlign: "center",
+    marginTop: 7,
+    fontSize: 20,
+    fontWeight: "bold",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
   inputs: {
     width: 325,
     height: 50,
