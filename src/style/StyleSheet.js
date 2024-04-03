@@ -65,6 +65,11 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderWidth: 1,
     marginTop: 40,
+    color: "white",
+    textAlign: "center",
+    fontSize: 20,
+    fontWeight: "bold",
+    justifyContent: "center",
   },
 
   buttonn: {
@@ -74,22 +79,11 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderWidth: 2,
     marginTop: 40,
-  },
-
-  btn: {
-    color: "white",
-    textAlign: "center",
-    marginTop: 7,
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-
-  btnn: {
     color: "#DC143C",
     textAlign: "center",
-    marginTop: 7,
     fontSize: 20,
     fontWeight: "bold",
+    justifyContent: "center",
   },
 
   inputs: {

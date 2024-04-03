@@ -1,7 +1,8 @@
-import { View, TouchableOpacity, Modal } from "react-native";
+import { View, Modal } from "react-native";
 import styles from "../style/StyleSheet";
 import Texto from "./TextComponent";
-import Imagem from "./ImageComponent"
+import Imagem from "./ImageComponent";
+import Botao from "./TouchableComponent";
 
 // Fazendo as funções
 export default function componentModal({ result, visible, cond, alc, gas }) {
@@ -24,12 +25,7 @@ export default function componentModal({ result, visible, cond, alc, gas }) {
         <Texto styleText={styles.pricess} texto={`Gasolina: R$  ${gas}`} />
 
         {/*Botão Touchable para fechar*/}
-        <TouchableOpacity
-          style={styles.buttonn}
-          onPress={() => visModal(false)}
-        >
-          <Texto styleText={styles.btnn} texto="Calcular Novamento" />
-        </TouchableOpacity>
+        <Botao styleTouchable={styles.buttonn} pressionar={() => visModal(false)} calculate="Calcular Novamente" />
       </View>
     </Modal>
   );

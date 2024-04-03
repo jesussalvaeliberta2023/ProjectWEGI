@@ -1,16 +1,14 @@
 // Importando tudo que foi usado
 import { View, TouchableOpacity } from "react-native";
-import { View, TouchableOpacity } from "react-native";
 
 // Importando o styles
 import styles from "./src/style/StyleSheet";
 import React, { useState } from "react";
 import ComponentModal from "./src/components/componentModal";
 import Texto from "./src/components/TextComponent";
-
-import Input from "./src/components/TextInputComponent";
-
+import Input from "./src/components/InputComponent";
 import Imagem from "./src/components/ImageComponent";
+import Botao from "./src/components/TouchableComponent";
 
 // Fazendo as funções
 export default function App() {
@@ -54,31 +52,21 @@ export default function App() {
       <Texto styleText={styles.insert} texto="Álcool (preço por litro):" />
       <Input
         styleInput={styles.inputs}
-        onChangeText={setAlcool}
-        value={alcool}
-        keyboardType="numeric"
+        mudanca={setAlcool}
+        valor={alcool}
+        numero="numeric"
       />
 
       <Texto styleText={styles.insertt} texto="Gasolina (preço por litro):" />
       <Input
         styleInput={styles.inputs}
-        onChangeText={setGasolina}
-        value={gasolina}
-        keyboardType="numeric"
+        mudanca={setGasolina}
+        valor={gasolina}
+        numero="numeric"
       />
 
       {/*Botão Touchable com a função do calculo e para abrir o modal*/}
-
-      <TouchableOpacity
-        styleTouchable={styles.button}
-        onPress={() => calculo()}
-      >
-        <Texto styleText={styles.btn} texto="Calcular" />
-      </TouchableOpacity>
-
-      <TouchableOpacity style={styles.button} onPress={() => calculo()}>
-        <Texto styletext={styles.btn} texto="Calcular" />
-      </TouchableOpacity>
+      <Botao styleTouchable={styles.button} pressionar={() => calculo()} calculate="Calcular" />
 
       {/*Código do modal*/}
       <ComponentModal
