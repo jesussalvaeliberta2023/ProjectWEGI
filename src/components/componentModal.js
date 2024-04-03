@@ -25,7 +25,7 @@ export default function componentModal({ result, visible, cond, alc, gas }) {
         <Texto styleText={styles.pricess} texto={`Gasolina: R$  ${gas}`} />
 
         {/*Botão Touchable para fechar*/}
-        <Botao styleTouchable={styles.buttonn} pressionar={() => visModal(false)} calculate="Calcular Novamente" />
+        <Botao styleTouchable={styles.buttonn} btn={styles.btn} pressionar={() => visModal(false)} calculate="Calcular Novamente" />
       </View>
     </Modal>
   );

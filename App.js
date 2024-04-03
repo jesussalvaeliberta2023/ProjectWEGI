@@ -1,5 +1,5 @@
 // Importando tudo que foi usado
-import { View, TouchableOpacity } from "react-native";
+import { View } from "react-native";
 
 // Importando o styles
 import styles from "./src/style/StyleSheet";
@@ -17,14 +17,9 @@ export default function App() {
   const [gasolina, setGasolina] = useState("");
   const [alcool, setAlcool] = useState("");
   const [condicao, setCondicao] = useState("");
-
-  // Função para vizualizar o model
+  // Função para vizualizar o
   visModal = (vis) => {
-    if (!visible) {
-      setVisible(vis);
-    } else {
-      setVisible(vis);
-    }
+    !visible ? setVisible(vis) : setVisible(vis);
   };
 
   // Função do cálculo da gasolina e do álcool
@@ -66,7 +61,12 @@ export default function App() {
       />
 
       {/*Botão Touchable com a função do calculo e para abrir o modal*/}
-      <Botao styleTouchable={styles.button} pressionar={() => calculo()} calculate="Calcular" />
+      <Botao
+        styleTouchable={styles.button}
+        btn={styles.btn}
+        pressionar={() => calculo()}
+        calculate="Calcular"
+      />
 
       {/*Código do modal*/}
       <ComponentModal
