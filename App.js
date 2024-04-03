@@ -1,10 +1,11 @@
 // Importando tudo que foi usado
-import { View, Image, Text, TextInput, TouchableOpacity } from "react-native";
+import { View, Image, Text, TouchableOpacity } from "react-native";
 // Importando o styles
 import styles from "./src/style/StyleSheet";
 import React, { useState } from "react";
 import ComponentModal from "./src/components/componentModal";
 import Texto from "./src/components/TextComponent";
+import Input from "./src/components/TextInputComponent";
 
 // Fazendo as funções
 export default function App() {
@@ -46,16 +47,16 @@ export default function App() {
 
       {/*Os inputs com os values para a conta*/}
       <Texto styleText={styles.insert} texto="Álcool (preço por litro):" />
-      <TextInput
-        style={styles.inputs}
+      <Input
+        styleInput={styles.inputs}
         onChangeText={setAlcool}
         value={alcool}
         keyboardType="numeric"
       />
 
       <Texto styleText={styles.insertt} texto="Gasolina (preço por litro):" />
-      <TextInput
-        style={styles.inputs}
+      <Input
+        styleInput={styles.inputs}
         onChangeText={setGasolina}
         value={gasolina}
         keyboardType="numeric"
