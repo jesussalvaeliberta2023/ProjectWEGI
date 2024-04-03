@@ -1,7 +1,8 @@
-import { View, Image, Text, TouchableOpacity, Modal } from "react-native";
+import { View, TouchableOpacity, Modal } from "react-native";
 import React, { useState } from "react";
 import styles from "../style/StyleSheet";
 import Texto from "./TextComponent";
+import Imagem from "./ImageComponent"
 
 // Fazendo as funções
 export default function componentModal({ result, visible, cond, alc, gas }) {
@@ -12,9 +13,9 @@ export default function componentModal({ result, visible, cond, alc, gas }) {
     <Modal transparent={true} animationType="slide" visible={visible}>
       <View style={styles.modal}>
         {/*Imagem*/}
-        <Image
-          style={styles.logo}
-          source={require("../assets/images/gas.png")}
+        <Imagem
+          styleimg={styles.logo}
+          foto={require("../assets/images/gas.png")}
         />
 
         {/*Textos que mostra o resultado que compensa e o quanto foi colocado de alcool e gasolina*/}

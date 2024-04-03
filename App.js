@@ -1,11 +1,17 @@
 // Importando tudo que foi usado
-import { View, Image, Text, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity } from "react-native";
+import { View,  TouchableOpacity } from "react-native";
+
 // Importando o styles
 import styles from "./src/style/StyleSheet";
 import React, { useState } from "react";
 import ComponentModal from "./src/components/componentModal";
 import Texto from "./src/components/TextComponent";
+
 import Input from "./src/components/TextInputComponent";
+
+import Imagem from "./src/components/ImageComponent";
+
 
 // Fazendo as funções
 export default function App() {
@@ -37,9 +43,9 @@ export default function App() {
     // View principal
     <View style={styles.container}>
       {/*Imagem*/}
-      <Image
-        style={styles.logo}
-        source={require("./src/assets/images/Logo.png")}
+      <Imagem
+        styleimg={styles.logo}
+        foto={require("./src/assets/images/Logo.png")}
       />
 
       {/*Os textos*/}
@@ -64,7 +70,7 @@ export default function App() {
 
       {/*Botão Touchable com a função do calculo e para abrir o modal*/}
       <TouchableOpacity style={styles.button} onPress={() => calculo()}>
-        <Text style={styles.btn}>Calcular</Text>
+        <Texto styletext={styles.btn} texto="Calcular" />
       </TouchableOpacity>
 
       {/*Código do modal*/}
