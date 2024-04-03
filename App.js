@@ -26,7 +26,7 @@ export default function App() {
   // Função do cálculo da gasolina e do álcool
   const calculo = () => {
     visModal(true);
-    const div = alcool / gasolina;
+    const div = parseFloat(alcool) / parseFloat(gasolina);
     const condicao = div < 0.7 ? "Álcool" : "Gasolina";
     const resultado = "Compensa usar: " + condicao;
     setCondicao(resultado);
