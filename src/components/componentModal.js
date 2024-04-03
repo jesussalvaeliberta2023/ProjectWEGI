@@ -1,5 +1,4 @@
 import { View, TouchableOpacity, Modal } from "react-native";
-import React, { useState } from "react";
 import styles from "../style/StyleSheet";
 import Texto from "./TextComponent";
 import Imagem from "./ImageComponent"
