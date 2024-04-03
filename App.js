@@ -1,5 +1,5 @@
 // Importando tudo que foi usado
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import { View, TextInput, TouchableOpacity } from "react-native";
 // Importando o styles
 import styles from "./src/style/StyleSheet";
 import React, { useState } from "react";
@@ -64,7 +64,7 @@ export default function App() {
 
       {/*Botão Touchable com a função do calculo e para abrir o modal*/}
       <TouchableOpacity style={styles.button} onPress={() => calculo()}>
-        <Text style={styles.btn}>Calcular</Text>
+        <Texto styletext={styles.btn} texto="Calcular" />
       </TouchableOpacity>
 
       {/*Código do modal*/}
