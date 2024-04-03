@@ -1,10 +1,11 @@
 // Importando tudo que foi usado
-import { View, Image, Text, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
 // Importando o styles
 import styles from "./src/style/StyleSheet";
 import React, { useState } from "react";
 import ComponentModal from "./src/components/componentModal";
 import Texto from "./src/components/TextComponent";
+import Imagem from "./src/components/ImageComponent";
 
 // Fazendo as funções
 export default function App() {
@@ -36,9 +37,9 @@ export default function App() {
     // View principal
     <View style={styles.container}>
       {/*Imagem*/}
-      <Image
-        style={styles.logo}
-        source={require("./src/assets/images/Logo.png")}
+      <Imagem
+        styleimg={styles.logo}
+        foto={require("./src/assets/images/Logo.png")}
       />
 
       {/*Os textos*/}
