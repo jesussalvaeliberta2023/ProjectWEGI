@@ -18,7 +18,7 @@ export default function App() {
   const [alcool, setAlcool] = useState("");
   const [condicao, setCondicao] = useState("");
   // Função para vizualizar o
-  
+
   visModal = (vis) => {
     !visible ? setVisible(vis) : setVisible(vis);
   };
