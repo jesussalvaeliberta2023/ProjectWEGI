@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     justifyContent: "center",
     alignItems: "center",
+    marginTop: 12,
   },
 
   btnn: {
@@ -93,6 +94,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     alignItems: "center",
     justifyContent: "center",
+    marginTop: 12,
   },
 
   inputs: {
